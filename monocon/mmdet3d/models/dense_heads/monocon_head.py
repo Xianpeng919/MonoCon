@@ -27,7 +27,7 @@ class MonoConHead(nn.Module):
                  num_alpha_bins=12,
                  max_objs=30,
                  vector_regression_level=1,
-                 pred_bbox2d=False,
+                 pred_bbox2d=True,
                  loss_center_heatmap=None,
                  loss_wh=None,
                  loss_offset=None,
