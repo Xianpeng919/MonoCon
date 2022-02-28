@@ -149,11 +149,13 @@ Please consider citing our paper in your publications if it helps your research.
     year = {2022}
 }
 
-@article{li2019attentive,
-  title={Attentive Normalization},
+@inproceedings{li2020attentive,
+  title={Attentive normalization},
   author={Li, Xilai and Sun, Wei and Wu, Tianfu},
-  journal={arXiv preprint arXiv:1908.01259},
-  year={2019}
+  booktitle={European Conference on Computer Vision},
+  pages={70--87},
+  year={2020},
+  organization={Springer}
 }
 ```
 
