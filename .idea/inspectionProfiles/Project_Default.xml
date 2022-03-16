@@ -1,0 +1,26 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="13">
+            <item index="0" class="java.lang.String" itemvalue="isort" />
+            <item index="1" class="java.lang.String" itemvalue="xdoctest" />
+            <item index="2" class="java.lang.String" itemvalue="pprint" />
+            <item index="3" class="java.lang.String" itemvalue="tnt" />
+            <item index="4" class="java.lang.String" itemvalue="onnx" />
+            <item index="5" class="java.lang.String" itemvalue="yacs" />
+            <item index="6" class="java.lang.String" itemvalue="pydot" />
+            <item index="7" class="java.lang.String" itemvalue="fvcore" />
+            <item index="8" class="java.lang.String" itemvalue="iopath" />
+            <item index="9" class="java.lang.String" itemvalue="future" />
+            <item index="10" class="java.lang.String" itemvalue="cloudpickle" />
+            <item index="11" class="java.lang.String" itemvalue="pycocotools" />
+            <item index="12" class="java.lang.String" itemvalue="omegaconf" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
