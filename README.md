@@ -123,12 +123,20 @@ CUDA_VISIBLE_DEVICES=0  python ./tools/train.py configs/monocon/monocon_dla34_20
 CUDA_VISIBLE_DEVICES=0 python ./tools/test.py configs/monocon/monocon_dla34_inference_200e_kitti.py ./work_dirs/ur_ckpt_location --eval bbox
 ```
 
-We provide pre-trained checkpoints. MonoDLE*'s model, config and pretrained weight will be released soon.
-See the below table to check the performance. (Inference speed is tested on Nvidia 2080Ti)
+We provide pre-trained checkpoints. MonoDLE*'s model, config and pretrained weight will be released soon. See the below table to check the performance. (Inference speed is tested on Nvidia 2080Ti)
 
-|         | AP40@Easy | AP40@Mod. | AP40@Hard | FPS | Link      |
+\[Update 06/23]: We have updated more checkpoints and training logs of MonoCon for the purpose of supporting reproducible research.
+
+
+|         | AP40@Easy | AP40@Mod. | AP40@Hard | FPS/log | Link      |
 | ------- | --------- |-----------|-----------|-----|-----------|
-| MonoCon | 26.33     | 19.03     | 16.00     | 40  | [Model](https://drive.google.com/file/d/1XOTGfehtT8Vnvhk2dvwEZAiW9gVlS1_M/view?usp=sharing) |
+| MonoCon (paper) | **26.33**     | 19.03     | 16.00     | 40  | [Model](https://drive.google.com/file/d/1XOTGfehtT8Vnvhk2dvwEZAiW9gVlS1_M/view?usp=sharing) |
+| MonoCon (reproduced #1) | 25.09     | 18.91     | 15.99    | [Log1](https://drive.google.com/file/d/1m4iGuJqx8FS7vXb_gZzgMbtsPpXSdu1g/view?usp=sharing)  | [Model](https://drive.google.com/file/d/1fz0WyH7OutXQvm6kYKEgzj3LVn6JvdUc/view?usp=sharing) |
+| MonoCon (reproduced #2) | 25.99     | 18.98     | **16.13**     | [Log2](https://drive.google.com/file/d/1PKcUSNpZJwN6IxpYSnjJWXteLhQ8R-zn/view?usp=sharing)  | [Model](https://drive.google.com/file/d/1D-4KqRbFgj6fun7N_j3NialqKIbMeprT/view?usp=sharing) |
+| MonoCon (reproduced #3) | 25.86     | 18.78     | 16.00     | [Log3](https://drive.google.com/file/d/1PMGGRH9KrbewLECYymoNSh5lGrI3M7-u/view?usp=sharing)  | [Model](https://drive.google.com/file/d/1CMpj4eiwfEun_0yaLChTUkbHybFH7xBI/view?usp=sharing) |
+| MonoCon (reproduced #4) | 25.21     | 18.74     | 15.87     | [Log4](https://drive.google.com/file/d/1SE_eFrPHfXCGctIUHicKRxOi9PTiycx8/view?usp=sharing)  | [Model](https://drive.google.com/file/d/1wF7Riwl7GnJ3fOyKDX5-W_1DBo9Wu2aa/view?usp=sharing) |
+| MonoCon (reproduced #5) | 25.92     | **19.08**     | 16.03     | [Log5](https://drive.google.com/file/d/1raRPfLihKRgmbVWKUUGcR-Jo9-8ki5ht/view?usp=sharing)  | [Model](https://drive.google.com/file/d/105A0LnN5jQrhzio7tBCd3pwVc2moN3DA/view?usp=sharing) |
+| Average | 25.74     |  18.92    |   16.00   | -  | - |
 
 
 ## License
@@ -165,6 +173,10 @@ This repo benefits from awesome works of [mmdetection](https://github.com/open-m
 [mmdetection3D](https://github.com/open-mmlab/mmdetection3d), [MonoDLE](https://github.com/xinzhuma/monodle),
 [MonoFlex](https://github.com/zhangyp15/MonoFlex),
 [RTM3D](https://github.com/Banconxuan/RTM3D).  Please also consider citing them.
+
+## Related Links
+
+\[Update 06/23]:  Here are some reproduced version on MonoCon: [monocon-pytorch](https://github.com/2gunsu/monocon-pytorch), [MonoDetector](https://github.com/zhangcheng828/MonoDetector).
 
 ## Contact
 
