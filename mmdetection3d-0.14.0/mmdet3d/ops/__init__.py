@@ -18,6 +18,8 @@ from .roiaware_pool3d import (RoIAwarePool3d, points_in_boxes_batch,
 from .sparse_block import (SparseBasicBlock, SparseBottleneck,
                            make_sparse_convmodule)
 from .voxel import DynamicScatter, Voxelization, dynamic_scatter, voxelization
+from .attentive_norm import AttnBatchNorm2d
+
 
 __all__ = [
     'nms', 'soft_nms', 'RoIAlign', 'roi_align', 'get_compiler_version',
@@ -31,5 +33,5 @@ __all__ = [
     'gather_points', 'grouping_operation', 'group_points', 'GroupAll',
     'QueryAndGroup', 'PointSAModule', 'PointSAModuleMSG', 'PointFPModule',
     'points_in_boxes_batch', 'get_compiler_version',
-    'get_compiling_cuda_version', 'Points_Sampler', 'build_sa_module'
+    'get_compiling_cuda_version', 'Points_Sampler', 'build_sa_module', 'AttnBatchNorm2d'
 ]

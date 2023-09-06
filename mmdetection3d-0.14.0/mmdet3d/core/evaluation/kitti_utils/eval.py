@@ -568,11 +568,13 @@ def eval_class(gt_annos,
     return ret_dict
 
 
+# use AP40 instead of AP11
 def get_mAP(prec):
     sums = 0
-    for i in range(0, prec.shape[-1], 4):
+    # for i in range(0, prec.shape[-1], 4):
+    for i in range(1, prec.shape[-1]):
         sums = sums + prec[..., i]
-    return sums / 11 * 100
+    return sums / 40 * 100   # 11
 
 
 def print_str(value, *arg, sstream=None):

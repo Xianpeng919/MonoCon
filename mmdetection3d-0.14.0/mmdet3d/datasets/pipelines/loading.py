@@ -661,3 +661,32 @@ class LoadAnnotations3D(LoadAnnotations):
         repr_str += f'{indent_str}with_bbox_depth={self.with_bbox_depth}, '
         repr_str += f'{indent_str}poly2mask={self.poly2mask})'
         return repr_str
+
+
+@PIPELINES.register_module()
+class LoadAnnotations3DMonoCon(LoadAnnotations3D):
+    def __init__(self,
+                 with_2D_kpts=True,
+                 **kwargs):
+        super().__init__(**kwargs)
+        self.with_2D_kpts = with_2D_kpts
+
+    def _load_kpts_2d(self, results):
+        """Private function to load 3D bounding box annotations.
+
+        Args:
+            results (dict): Result dict from :obj:`mmdet3d.CustomDataset`.
+
+        Returns:
+            dict: The dict containing loaded 3D bounding box annotations.
+        """
+        results['gt_kpts_2d'] = results['ann_info']['gt_kpts_2d']
+        results['gt_kpts_valid_mask'] = results['ann_info']['gt_kpts_valid_mask']
+        return results
+
+    def __call__(self, results):
+        results = super().__call__(results)
+        if self.with_2D_kpts:
+            results = self._load_kpts_2d(results)
+
+        return results
